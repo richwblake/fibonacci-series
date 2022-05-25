@@ -1,5 +1,20 @@
 function fibonacci(num) {
-  // type your code here
+    if (num === 0) return 0;
+    let count = 0;
+    let a = 1;
+    let b = 1;
+
+    while (count < num - 2) {
+        const tmp = b;
+        b = a + b;
+        a = tmp;
+        count++;
+    }
+    return b;
+}
+
+const fib_util = (num, count) => {
+    
 }
 
 if (require.main === module) {
